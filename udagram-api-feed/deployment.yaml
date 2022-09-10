@@ -18,6 +18,13 @@ spec:
         - name: backend-feed
           imagePullPolicy: Always
           image: thanhlong1543/udagram-api-feed:v1
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
           envFrom:
             - configMapRef:
                 name: env-configmap
